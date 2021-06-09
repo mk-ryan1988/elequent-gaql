@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MkRyan1988\\GaqlBuilder\\": "src",
-            "MkRyan1988\\GaqlBuilder\\Database\\Factories\\": "database/factories"
+            "MkRyan1988\\EloquentGaql\\": "src",
+            "MkRyan1988\\EloquentGaql\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MkRyan1988\\GaqlBuilder\\Tests\\": "tests"
+            "MkRyan1988\\EloquentGaql\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -53,7 +53,6 @@
                 "MkRyan1988\\GaqlBuilder\\GaqlBuilderServiceProvider"
             ],
             "aliases": {
-                "Gaql": "MkRyan1988\\GaqlBuilder\\GaqlBuilderFacade"
             }
         }
     },

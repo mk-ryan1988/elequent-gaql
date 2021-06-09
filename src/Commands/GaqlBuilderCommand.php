@@ -1,6 +1,6 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder\Commands;
+namespace MkRyan1988\EloquentGaql\Commands;
 
 use Illuminate\Console\Command;
 

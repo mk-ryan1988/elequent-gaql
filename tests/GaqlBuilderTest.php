@@ -1,8 +1,8 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder\Tests;
+namespace MkRyan1988\EloquentGaql\Tests;
 
-use MkRyan1988\GaqlBuilder\GaqlBuilder;
+use MkRyan1988\EloquentGaql\GaqlBuilder;
 
 class GaqlBuilderTest extends TestCase
 {

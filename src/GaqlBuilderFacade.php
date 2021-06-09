@@ -1,6 +1,6 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder;
+namespace MkRyan1988\EloquentGaql;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class GaqlBuilderFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'GaqlBuilder';
+        // return 'GaqlBuilder';
     }
 }

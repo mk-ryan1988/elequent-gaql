@@ -1,6 +1,6 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder\Database\Factories;
+namespace MkRyan1988\EloquentGaql\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

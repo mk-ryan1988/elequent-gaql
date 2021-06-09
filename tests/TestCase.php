@@ -1,6 +1,6 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder\Tests;
+namespace MkRyan1988\EloquentGaql\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider;

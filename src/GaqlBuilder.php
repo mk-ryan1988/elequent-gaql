@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MkRyan1988\GaqlBuilder;
+namespace MkRyan1988\EloquentGaql;
 
 use Illuminate\Support\Arr;
 
