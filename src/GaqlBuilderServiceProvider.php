@@ -17,11 +17,4 @@ class GaqlBuilderServiceProvider extends PackageServiceProvider
         $package
             ->name('eloquent-gaql');
     }
-
-    public function register()
-    {
-        $this->app->bind('calculator', function() {
-            return new GaqlBuilderFacade();
-        });
-    }
 }
