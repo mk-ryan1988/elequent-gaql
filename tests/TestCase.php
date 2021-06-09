@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'MkRyan1988\\GaqlBuilder\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'MkRyan1988\\EloquentGaql\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
