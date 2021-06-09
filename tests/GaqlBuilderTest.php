@@ -16,7 +16,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function baselineSelectQuery() {
+    public function baselineSelectQuery()
+    {
         $query = 'SELECT billing_setup.id, '
             . 'billing_setup.status, '
             . 'billing_setup.payments_account_info.payments_account_id, '
@@ -32,7 +33,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function simpleSelectQuery() {
+    public function simpleSelectQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -51,7 +53,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function simpleSelectResourceQuery() {
+    public function simpleSelectResourceQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -70,7 +73,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function limitSelectQuery() {
+    public function limitSelectQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -90,7 +94,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function orderSelectQuery() {
+    public function orderSelectQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -112,7 +117,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function invalidOrderSelectQuery() {
+    public function invalidOrderSelectQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -134,7 +140,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function baselineSimpleWhereQuery() {
+    public function baselineSimpleWhereQuery()
+    {
         $query = 'SELECT metrics.clicks, '
             . 'metrics.cost_micros, '
             . 'metrics.impressions, '
@@ -152,7 +159,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function simpleWhereQuery() {
+    public function simpleWhereQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'metrics.clicks',
@@ -173,7 +181,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function simpleWhereWithNoValue() {
+    public function simpleWhereWithNoValue()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'metrics.clicks',
@@ -194,7 +203,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function simpleWhereWithTake() {
+    public function simpleWhereWithTake()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'metrics.clicks',
@@ -215,7 +225,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereNullQuery() {
+    public function whereNullQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'metrics.clicks',
@@ -236,7 +247,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereNotNullQuery() {
+    public function whereNotNullQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'metrics.clicks',
@@ -257,7 +269,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereDuringQuery() {
+    public function whereDuringQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -278,7 +291,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereLowerCaseDuringQuery() {
+    public function whereLowerCaseDuringQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -299,7 +313,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereBetweenQuery() {
+    public function whereBetweenQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -320,7 +335,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereInQuery() {
+    public function whereInQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',
@@ -341,7 +357,8 @@ class GaqlBuilderTest extends TestCase
     }
 
     /** @test */
-    public function whereNotQuery() {
+    public function whereNotQuery()
+    {
         $query = $this->gaqlBuilder
             ->select(
                 'billing_setup.id',

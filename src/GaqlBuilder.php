@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace MkRyan1988\GaqlBuilder;
 
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
 
 class GaqlBuilder
 {
@@ -108,7 +107,9 @@ class GaqlBuilder
         // passed to the method, we will assume that the operator is an equals sign
         // and keep going. Otherwise, we'll require the operator to be passed in.
         [$value, $operator] = $this->prepareValueAndOperator(
-            $value, $operator, func_num_args() === 2
+            $value,
+            $operator,
+            func_num_args() === 2
         );
 
         // If the given operator is not found in the list of valid operators we will
@@ -130,7 +131,11 @@ class GaqlBuilder
         // Now that we are sure we have a valid where filter we will
         // add it to our $wheres array
         $this->wheres[] = compact(
-            'type', 'field', 'operator', 'value', 'boolean'
+            'type',
+            'field',
+            'operator',
+            'value',
+            'boolean'
         );
 
         return $this;
@@ -149,7 +154,7 @@ class GaqlBuilder
         [$type, $operator, $value] = [
             $not ? 'NotNull' : 'Null',
             $not ? 'IS NOT NULL' : 'IS NULL',
-            ''
+            '',
         ];
 
         foreach (Arr::wrap($field) as $field) {
@@ -203,7 +208,6 @@ class GaqlBuilder
 
     public function whereIn(string $field, array $values, $boolean = 'and', $not = false): GaqlBuilder
     {
-
         $type = 'In';
         $operator = strtoupper($type);
 
