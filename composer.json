@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "mk-ryan1988/elequent-gaql",
+    "description": "Allows you to write Google Ad's GAQL the Eloquent way.",
     "keywords": [
-        ":vendor_name",
+        "mk-ryan1988",
         "laravel",
-        "package_slug"
+        "elequent-gaql"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/mk-ryan1988/elequent-gaql",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Mark Ryan",
+            "email": "mkryan1988@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "MkRyan1988\\GaqlBuilder\\": "src",
+            "MkRyan1988\\GaqlBuilder\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "MkRyan1988\\GaqlBuilder\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "MkRyan1988\\GaqlBuilder\\GaqlBuilderServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "GaqlBuilder": "MkRyan1988\\GaqlBuilder\\GaqlBuilderFacade"
             }
         }
     },

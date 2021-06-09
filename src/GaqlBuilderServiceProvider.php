@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace MkRyan1988\GaqlBuilder;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use MkRyan1988\GaqlBuilder\Commands\GaqlBuilderCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class GaqlBuilderServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('elequent-gaql')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_elequent-gaql_table')
+            ->hasCommand(GaqlBuilderCommand::class);
     }
 }

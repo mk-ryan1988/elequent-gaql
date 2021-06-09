@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace MkRyan1988\GaqlBuilder\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class GaqlBuilderCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'elequent-gaql';
 
     public $description = 'My command';
 

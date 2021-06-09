@@ -1,2 +1,2 @@
 providers:
-  - VendorName\Skeleton\SkeletonServiceProvider
+  - MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider

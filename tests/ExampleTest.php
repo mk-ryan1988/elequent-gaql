@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace MkRyan1988\GaqlBuilder\Tests;
 
 class ExampleTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace MkRyan1988\GaqlBuilder\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
