@@ -54,6 +54,11 @@ class GaqlBuilder
         $this->compiler = new GaqlCompiler();
     }
 
+    public static function query(): static
+    {
+        return (new static);
+    }
+
     /**
      * Build the actual query string
      */
