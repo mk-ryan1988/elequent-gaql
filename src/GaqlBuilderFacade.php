@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Facade;
  */
 class GaqlBuilderFacade extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return 'eloquent-gaql';
+        return 'GaqlBuilder';
     }
 }
