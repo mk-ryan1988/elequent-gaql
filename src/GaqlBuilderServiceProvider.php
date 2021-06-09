@@ -20,7 +20,7 @@ class GaqlBuilderServiceProvider extends PackageServiceProvider
 
     public function register()
     {
-        $this->app->bind('calculator', function() {
+        $this->app->bind('calculator', function () {
             return new GaqlBuilderFacade();
         });
     }

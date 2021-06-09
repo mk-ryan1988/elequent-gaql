@@ -3,8 +3,8 @@
 namespace MkRyan1988\GaqlBuilder\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

@@ -44,14 +44,18 @@ class GaqlCompiler
 
     private function compileLimit(): string
     {
-        if (! $this->builder->limit) return '';
+        if (! $this->builder->limit) {
+            return '';
+        }
 
         return 'LIMIT ' . $this->builder->limit;
     }
 
     private function compileOrders(): string
     {
-        if (empty($this->builder->orders)) return '';
+        if (empty($this->builder->orders)) {
+            return '';
+        }
 
         $strings = [];
         foreach ($this->builder->orders as $order) {
@@ -63,7 +67,9 @@ class GaqlCompiler
 
     private function compileWheres(): string
     {
-        if (empty($this->builder->wheres)) return '';
+        if (empty($this->builder->wheres)) {
+            return '';
+        }
 
         $strings = [];
         foreach ($this->builder->wheres as $where) {
@@ -114,7 +120,7 @@ class GaqlCompiler
     {
         $operator = $this->appendNotOperator($where);
 
-        $quote = function($value) {
+        $quote = function ($value) {
             return $this->quote($value);
         };
 
@@ -125,24 +131,30 @@ class GaqlCompiler
 
     private function quote(string $value): string
     {
-        if (empty($value)) return '';
+        if (empty($value)) {
+            return '';
+        }
 
         return '\'' . $value . '\'';
     }
 
     private function appendNotOperator(array $where): string
     {
-        if ($where['not']) return 'NOT ' . $where['operator'];
+        if ($where['not']) {
+            return 'NOT ' . $where['operator'];
+        }
 
         return $where['operator'];
     }
 
     private function concatenate(array $values): string
     {
-        $strings = array();
+        $strings = [];
 
         foreach ($values as $value) {
-            if (empty($value)) continue;
+            if (empty($value)) {
+                continue;
+            }
             $strings[] = trim($value);
         }
 
