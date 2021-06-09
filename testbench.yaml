@@ -1,2 +1,2 @@
 providers:
-  - MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider
+  - MkRyan1988\EloquentGaql\GaqlBuilderServiceProvider
