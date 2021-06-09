@@ -1,6 +1,6 @@
 <?php
 
-namespace MkRyan1988\GaqlBuilder;
+namespace MkRyan1988\EloquentGaql;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
