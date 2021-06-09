@@ -1,9 +1,9 @@
 # Eloquent GAQL
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mk-ryan1988/elequent-gaql.svg?style=flat-square)](https://packagist.org/packages/mk-ryan1988/elequent-gaql)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/mk-ryan1988/elequent-gaql/run-tests?label=tests)](https://github.com/mk-ryan1988/elequent-gaql/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/mk-ryan1988/elequent-gaql/Check%20&%20fix%20styling?label=code%20style)](https://github.com/mk-ryan1988/elequent-gaql/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/mk-ryan1988/elequent-gaql.svg?style=flat-square)](https://packagist.org/packages/mk-ryan1988/elequent-gaql)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mk-ryan1988/eloquent-gaql.svg?style=flat-square)](https://packagist.org/packages/mk-ryan1988/eloquent-gaql)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/mk-ryan1988/eloquent-gaql/run-tests?label=tests)](https://github.com/mk-ryan1988/eloquent-gaql/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/mk-ryan1988/eloquent-gaql/Check%20&%20fix%20styling?label=code%20style)](https://github.com/mk-ryan1988/eloquent-gaql/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/mk-ryan1988/eloquent-gaql.svg?style=flat-square)](https://packagist.org/packages/mk-ryan1988/eloquent-gaql)
 
 Allows you to write Google Ad's Query strings the [Laravel Eloquent](https://laravel.com/docs/8.x/queries) way.
 
@@ -12,19 +12,19 @@ Allows you to write Google Ad's Query strings the [Laravel Eloquent](https://lar
 You can install the package via composer:
 
 ```bash
-composer require mk-ryan1988/elequent-gaql
+composer require mk-ryan1988/eloquent-gaql
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider" --tag="elequent-gaql-migrations"
+php artisan vendor:publish --provider="MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider" --tag="eloquent-gaql-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider" --tag="elequent-gaql-config"
+php artisan vendor:publish --provider="MkRyan1988\GaqlBuilder\GaqlBuilderServiceProvider" --tag="eloquent-gaql-config"
 ```
 
 This is the contents of the published config file:

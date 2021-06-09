@@ -16,10 +16,10 @@ class GaqlBuilderServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('elequent-gaql')
+            ->name('eloquent-gaql')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_elequent-gaql_table')
+            ->hasMigration('create_eloquent-gaql_table')
             ->hasCommand(GaqlBuilderCommand::class);
     }
 }

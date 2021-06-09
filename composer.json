@@ -1,12 +1,12 @@
 {
-    "name": "mk-ryan1988/elequent-gaql",
+    "name": "mk-ryan1988/eloquent-gaql",
     "description": "Allows you to write Google Ad's GAQL the Eloquent way.",
     "keywords": [
         "mk-ryan1988",
         "laravel",
-        "elequent-gaql"
+        "eloquent-gaql"
     ],
-    "homepage": "https://github.com/mk-ryan1988/elequent-gaql",
+    "homepage": "https://github.com/mk-ryan1988/eloquent-gaql",
     "license": "MIT",
     "authors": [
         {

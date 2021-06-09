@@ -11,6 +11,6 @@ class GaqlBuilderFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'elequent-gaql';
+        return 'eloquent-gaql';
     }
 }

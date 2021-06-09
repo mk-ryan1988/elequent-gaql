@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class GaqlBuilderCommand extends Command
 {
-    public $signature = 'elequent-gaql';
+    public $signature = 'eloquent-gaql';
 
     public $description = 'My command';
 
