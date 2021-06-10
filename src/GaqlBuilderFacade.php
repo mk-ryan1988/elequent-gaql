@@ -5,12 +5,12 @@ namespace MkRyan1988\EloquentGaql;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \MkRyan1988\EloquentGaql\Builder
+ * @see \MkRyan1988\EloquentGaql\GaqlBuilder
  */
-class BuilderFacade extends Facade
+class GaqlBuilderFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'builder';
+        return 'GaqlBuilder';
     }
 }

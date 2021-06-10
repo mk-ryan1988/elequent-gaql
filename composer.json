@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37"
     },
@@ -53,7 +53,7 @@
                 "MkRyan1988\\EloquentGaql\\GaqlBuilderServiceProvider"
             ],
             "aliases": {
-                "Qaql": "MkRyan1988\\EloquentGaql\\BuilderFacade"
+                "Qaql": "MkRyan1988\\EloquentGaql\\GaqlBuilderFacade"
             }
         }
     },
