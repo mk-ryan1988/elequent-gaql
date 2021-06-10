@@ -13,7 +13,7 @@ class GaqlBuilder
     /**
      * The fields that should be returned
      */
-    public array $fields;
+    protected array $fields;
 
     /**
      * The resource the query is targeting
@@ -68,6 +68,14 @@ class GaqlBuilder
     }
 
     /**
+     * Alias to "build" the actual query string
+     */
+    public function toGaql(): string
+    {
+        return $this->build();
+    }
+
+    /**
      * Set the resource the query is targeting
      */
     public function from(string $resource): GaqlBuilder
@@ -78,7 +86,7 @@ class GaqlBuilder
     }
 
     /**
-     * Alias to set the "limit" value of the query.
+     * Alias to set the "resource" value of the query.
      */
     public function resource(string $resource): GaqlBuilder
     {
