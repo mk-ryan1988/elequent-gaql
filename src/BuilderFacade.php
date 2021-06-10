@@ -11,6 +11,6 @@ class BuilderFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'gaql-builder';
+        return 'builder';
     }
 }

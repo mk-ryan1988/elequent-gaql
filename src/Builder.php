@@ -6,7 +6,7 @@ namespace MkRyan1988\EloquentGaql;
 
 use Illuminate\Support\Arr;
 
-class GaqlBuilder
+class Builder
 {
     protected GaqlCompiler $compiler;
 
@@ -70,7 +70,7 @@ class GaqlBuilder
     /**
      * Set the resource the query is targeting
      */
-    public function from(string $resource): GaqlBuilder
+    public function from(string $resource): Builder
     {
         $this->from = $resource;
 
@@ -80,7 +80,7 @@ class GaqlBuilder
     /**
      * Alias to set the "limit" value of the query.
      */
-    public function resource(string $resource): GaqlBuilder
+    public function resource(string $resource): Builder
     {
         $this->from = $resource;
 
@@ -90,7 +90,7 @@ class GaqlBuilder
     /**
      * Set the fields to be selected.
      */
-    public function select($fields): GaqlBuilder
+    public function select($fields): Builder
     {
         $this->fields = is_array($fields) ? $fields : func_get_args();
 
@@ -106,7 +106,7 @@ class GaqlBuilder
      * @param string $boolean
      * @return $this
      */
-    public function where(string $field, $operator = null, $value = null, $boolean = 'and'): GaqlBuilder
+    public function where(string $field, $operator = null, $value = null, $boolean = 'and'): Builder
     {
         // Here we will make some assumptions about the operator. If only 2 values are
         // passed to the method, we will assume that the operator is an equals sign
@@ -154,7 +154,7 @@ class GaqlBuilder
      * @param  bool  $not
      * @return $this
      */
-    public function whereNull(string $field, $boolean = 'and', $not = false): GaqlBuilder
+    public function whereNull(string $field, $boolean = 'and', $not = false): Builder
     {
         [$type, $operator, $value] = [
             $not ? 'NotNull' : 'Null',
@@ -176,7 +176,7 @@ class GaqlBuilder
      * @param  string  $boolean
      * @return $this
      */
-    public function whereNotNull(string $field, $boolean = 'and'): GaqlBuilder
+    public function whereNotNull(string $field, $boolean = 'and'): Builder
     {
         return $this->whereNull($field, $boolean, true);
     }
@@ -189,7 +189,7 @@ class GaqlBuilder
      * @param string $boolean
      * @return $this
      */
-    public function whereDuring(string $field, $value, $boolean = 'and'): GaqlBuilder
+    public function whereDuring(string $field, $value, $boolean = 'and'): Builder
     {
         $type = 'during';
         $operator = strtoupper($type);
@@ -201,7 +201,7 @@ class GaqlBuilder
         return $this;
     }
 
-    public function whereBetween($field, array $values, $boolean = 'and', $not = false): GaqlBuilder
+    public function whereBetween($field, array $values, $boolean = 'and', $not = false): Builder
     {
         $type = 'between';
         $operator = strtoupper($type);
@@ -211,7 +211,7 @@ class GaqlBuilder
         return $this;
     }
 
-    public function whereIn(string $field, array $values, $boolean = 'and', $not = false): GaqlBuilder
+    public function whereIn(string $field, array $values, $boolean = 'and', $not = false): Builder
     {
         $type = 'In';
         $operator = strtoupper($type);
@@ -221,12 +221,12 @@ class GaqlBuilder
         return $this;
     }
 
-    public function whereNotIn(string $field, $values, $boolean = 'and'): GaqlBuilder
+    public function whereNotIn(string $field, $values, $boolean = 'and'): Builder
     {
         return $this->whereIn($field, $values, $boolean, true);
     }
 
-    public function orderBy(string $field, $direction = 'asc'): GaqlBuilder
+    public function orderBy(string $field, $direction = 'asc'): Builder
     {
         if (! in_array($direction, ['asc', 'desc'])) {
             $direction = 'asc';
@@ -240,7 +240,7 @@ class GaqlBuilder
     /**
      * Set the limit value of the query
      */
-    public function limit(int $value): GaqlBuilder
+    public function limit(int $value): Builder
     {
         $this->limit = $value ?? null;
 
@@ -250,7 +250,7 @@ class GaqlBuilder
     /**
      * Alias to set the "limit" value of the query.
      */
-    public function take(int $value): GaqlBuilder
+    public function take(int $value): Builder
     {
         return $this->limit($value);
     }

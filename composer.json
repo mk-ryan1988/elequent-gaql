@@ -53,7 +53,7 @@
                 "MkRyan1988\\EloquentGaql\\GaqlBuilderServiceProvider"
             ],
             "aliases": {
-                "Qaql": "MkRyan1988\\EloquentGaql\\GaqlBuilderFacade"
+                "Qaql": "MkRyan1988\\EloquentGaql\\BuilderFacade"
             }
         }
     },

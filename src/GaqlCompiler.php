@@ -17,9 +17,9 @@ class GaqlCompiler
         'limit',
     ];
 
-    protected GaqlBuilder $builder;
+    protected Builder $builder;
 
-    public function compileComponents(GaqlBuilder $builder): string
+    public function compileComponents(Builder $builder): string
     {
         $this->builder = $builder;
 

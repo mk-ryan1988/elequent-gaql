@@ -2,17 +2,17 @@
 
 namespace MkRyan1988\EloquentGaql\Tests;
 
-use MkRyan1988\EloquentGaql\GaqlBuilder;
+use MkRyan1988\EloquentGaql\Builder;
 
 class GaqlBuilderTest extends TestCase
 {
-    public GaqlBuilder $gaqlBuilder;
+    public Builder $gaqlBuilder;
 
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->gaqlBuilder = new GaqlBuilder();
+        $this->gaqlBuilder = new Builder();
     }
 
     /** @test */
