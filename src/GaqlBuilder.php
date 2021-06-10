@@ -13,7 +13,7 @@ class GaqlBuilder
     /**
      * The fields that should be returned
      */
-    protected array $fields;
+    public array $fields;
 
     /**
      * The resource the query is targeting
@@ -54,7 +54,7 @@ class GaqlBuilder
         $this->compiler = new GaqlCompiler();
     }
 
-    public static function query(): static
+    public static function query(): GaqlBuilder
     {
         return (new static);
     }
