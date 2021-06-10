@@ -16,5 +16,9 @@ class GaqlBuilderServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('eloquent-gaql');
+
+        $this->app->bind('builder', function() {
+            return new Builder();
+        });
     }
 }
